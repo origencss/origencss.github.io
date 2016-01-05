@@ -1,0 +1,123 @@
+html,body {
+	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+html {
+	background-color: rgba(0,0,0,0.07);
+}
+.container-no-fluid { max-width: 1200px; margin:auto; }
+
+
+.main {
+	height: 550px;
+	background-image: url(../img/wallhaven-310735.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.row {
+
+}
+
+.menu-superior {
+	height: 50px;
+	margin-top: 40px;
+}
+
+.frase {
+	height: 200px;
+}
+
+.imagen-descripcion {
+	height: 400px;
+	text-align: center;
+}
+
+.menu-inferior {
+	height: 50px;
+	background-color: rgba(40,40,40,0.85);
+	text-align: center;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: rgba(255,255,255,0.75);
+}
+.menu-inferior ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+
+
+}
+.menu-inferior ul li { 
+	display: inline; 
+	margin-right: 20px;
+}
+
+.menu-inferior ul li a {
+	color: rgba(255,255,255,0.75);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu-inferior ul li a:hover {
+	color: #fff;
+}
+.description {
+
+	text-align: center;
+	max-width: 1200px;
+	margin:auto;
+
+}
+.description p {
+	margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+	font-size: 18px;
+	max-width: 80%;
+	margin: auto;
+}
+.foot {
+	height: 150px;
+	background-color: rgba(40,40,40,1);
+	color: rgba(255,255,255,0.75);
+	font-size: 14px;
+}
+.foot ul {
+	margin-top: 60px;
+	padding: 0;
+	list-style-type: none;
+
+}
+.foot ul li {
+	display: inline; 
+	margin-right: 20px;
+}
+.foot ul li a {
+	font-weight: bold;
+}
+.foot p {
+	color: grey;
+}
+.foot a {
+	text-decoration: none;
+	color: rgba(255,255,255,0.75);
+}
+.main-logo {
+	height: 100px;
+}
+.texto-central {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.iconos-central {
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
+
+.inner-foot {
+	width: 1200px;
+	margin:auto;
+}
