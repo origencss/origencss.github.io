@@ -8,7 +8,7 @@ html {
 
 
 .main {
-	height: 550px;
+	min-height: 450px;
 	background-image: url(../img/wallhaven-310735.jpg);
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,22 +19,17 @@ html {
 
 }
 
-.menu-superior {
-	height: 50px;
-	margin-top: 40px;
+.imagen-logo {
+	margin-top: 70px;
 }
-
-.frase {
-	height: 200px;
-}
-
 .imagen-descripcion {
-	height: 400px;
+	min-height: 400px;
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 .menu-inferior {
-	height: 50px;
+	min-height: 50px;
 	background-color: rgba(40,40,40,0.85);
 	text-align: center;
 	color: white;
@@ -72,11 +67,12 @@ html {
 
 }
 .description p {
-	margin-bottom: 20px;
+	margin-bottom: 20px !important;
     font-weight: 300;
     line-height: 1.4;
 	font-size: 18px;
 	max-width: 80%;
+	text-align: center;
 	margin: auto;
 }
 .foot {
@@ -100,6 +96,7 @@ html {
 }
 .foot p {
 	color: grey;
+	display:inline;
 }
 .foot a {
 	text-decoration: none;
