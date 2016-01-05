@@ -59,13 +59,13 @@ html {
 	color: #fff;
 }
 .description {
-	text-align: center;
 	max-width: 1200px;
 	margin:auto;
+	text-align: center;
 }
 .features {
 	width: 350px;
-
+	text-align: center;
 }
 .description p {
 	margin-bottom: 20px !important;
