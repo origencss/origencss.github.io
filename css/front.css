@@ -37,7 +37,19 @@ html {
 	max-width: 1200px;
 	margin:auto;
 }
-
+.mini-logo {
+	/*font-family: 'Dense', sans-serif;*/
+	text-transform: uppercase;
+	font-weight: bold;
+	
+}
+.menu-inferior a:hover {
+	
+}
+.menu-inferior .active {
+	color: rgb(255,255,255);
+	font-weight: bold;
+}
 .logo {
 	font-family: 'Dense', sans-serif;
 	text-align: center;
@@ -110,9 +122,6 @@ p {
     font-weight: 300;
     line-height: 1.4;
 	font-size: 18px;
-	max-width: 80%;
-	text-align: center;
-	margin: auto;
 }
 .foot {
 	height: 150px;
