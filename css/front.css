@@ -1,62 +1,69 @@
 html,body {
 	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+ 	min-height: 100vh;
+	flex-direction: column;
+	font-size: 16px;
 }
 html {
 	background-color: rgba(0,0,0,0.07);
 }
+@font-face {
+	font-family: Dense;
+	src: url("../fonts/dense.regular.otf") format("opentype");
+	font-weight: 400; 
+}
+
 .site {
 	flex: 1;
 }
-.main {
-	min-height: 450px;
-	background-image: url(../img/wallhaven-310735.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+.top {
+	/*background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");*/
+	background-image: url("../img/wallhaven-310735.jpg");
 }
 
-.row {
-
-}
-.container-1200 {
-	width: 1200px;
+.container { /* interesante */
+	max-width: 1200px;
 	margin:auto;
 }
 
-.imagen-logo {
-	margin-top: 70px;
+.logo {
+	font-family: 'Dense', sans-serif;
 	text-align: center;
-}
-.imagen-descripcion {
-	min-height: 400px;
-	text-align: center;
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
-.superior {
-	background-color: rgba(40,40,40,1);
+.logo h1 {
+	font-size: 18em;
+	margin:0;
+	padding: 0;
+	color: rgba(255,255,255,1);
+	text-transform: uppercase;
 }
+.logo p {
+	margin-top: -40px;
+	font-size: 6em;
+	color: #e8e7e7;
+	line-height: 0.7;
+}
+.superior {
+	background-color: rgba(40,40,40,0.90);
+}
+
 .menu-inferior {
-	min-height: 50px;
+	background-color: #2a5d84;
 	background-color: rgba(40,40,40,1);
-	text-align: center;
-	color: white;
+	color: rgba(255,255,255,0.75);
 	padding-top: 15px;
 	padding-bottom: 15px;
-	color: rgba(255,255,255,0.75);
+	
 }
 .menu-inferior a {
 	color: rgba(255,255,255,0.75);
 	text-decoration: none;
 	font-weight: bold;
 }
-.interior{
-		width: 1200px;
-		margin:auto;
-		border:1px solid black;
-}
+
 .menu-inferior ul {
 	margin: 0;
 	padding: 0;
@@ -64,7 +71,6 @@ html {
 	text-align: center;
 
 }
-
 
 .menu-inferior ul li { 
 	display: inline; 
@@ -81,16 +87,13 @@ html {
 	color: #fff;
 }
 
-.description {
-	max-width: 1200px;
-	margin:auto;
-	text-align: center;
-}
+
 .features {
-	width: 350px;
+	overflow:hidden;
 	text-align: center;
 }
-.description p {
+
+p {
 	margin-bottom: 20px !important;
     font-weight: 300;
     line-height: 1.4;
@@ -104,13 +107,15 @@ html {
 	background-color: rgba(40,40,40,1);
 	color: rgba(255,255,255,0.75);
 	font-size: 14px;
+	padding-top: 40px;
 
 }
+
 .foot ul {
-	margin-top: 60px;
+	margin:0;
 	padding: 0;
 	list-style-type: none;
-
+	margin-bottom: 20px;
 }
 .foot ul li {
 	display: inline; 
@@ -122,6 +127,9 @@ html {
 .foot p {
 	color: grey;
 	display:inline;
+	font-size: 14px;
+	margin:0;
+	padding:0;
 }
 .foot a {
 	text-decoration: none;
@@ -133,6 +141,10 @@ html {
 .texto-central {
 	margin-top: 40px;
 	margin-bottom: 40px;
+	text-align: center;
+}
+.texto-central h1 {
+	margin-bottom: 0px;
 }
 .iconos-central {
 	margin-bottom: 60px;
@@ -141,5 +153,4 @@ html {
 
 .inner-foot {
 
-	text-align: center;
 }

@@ -1,3 +1,4 @@
+/* Origen by Migueladn version (0.1.1-alpha) */
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -24,7 +25,7 @@ html {
   /* 2 */ }
 
 /**
- * Remove default margin.
+ * Remove default margin
  */
 body {
   margin: 0; }
@@ -368,21 +369,35 @@ td,
 th {
   padding: 0; }
 
+/* Flexbox grid system*/
+.container {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 [class*='col-'] {
   /*-- gutter -- */
   padding-left: 12px;
   padding-right: 12px;
+  min-height: 1px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  width: 100%; }
 
 .row {
   box-sizing: border-box;
   display: box;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -6px;
-  margin-right: -6px; }
+  margin-left: -12px;
+  margin-right: -12px; }
 
 .row {
   -webkit-flex-basis: 100%;
@@ -534,7 +549,5 @@ th {
 
   .col-lg-12 {
     width: 100%; } }
-.outline, .outline * {
-  outline: 1px solid #F6A1A1; }
 
 /*# sourceMappingURL=origen.css.map */
