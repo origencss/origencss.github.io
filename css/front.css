@@ -20,8 +20,13 @@ html {
 	flex: 1;
 }
 .top {
+	background: #b4bfb7; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #b4bfb7 0%, #c1c5b7 29%, #bcbeb1 48%, #afa898 84%, #b99683 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #b4bfb7 0%,#c1c5b7 29%,#bcbeb1 48%,#afa898 84%,#b99683 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #b4bfb7 0%,#c1c5b7 29%,#bcbeb1 48%,#afa898 84%,#b99683 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4bfb7', endColorstr='#b99683',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	/*background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");*/
-	background-image: url("../img/wallhaven-310735.jpg"); 
+	/*background-image: url("../img/wallhaven-310735.jpg"); */
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
