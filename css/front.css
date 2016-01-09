@@ -3,6 +3,7 @@ html,body {
 	display: flex;
  	min-height: 100vh;
 	flex-direction: column;
+
 	font-size: 16px;
 }
 html {
@@ -11,6 +12,7 @@ html {
 @font-face {
 	font-family: Dense;
 	src: url("../fonts/dense.regular.otf") format("opentype");
+	src: url("../fonts/dense.regular.woff") format("opentype");
 	font-weight: 400; 
 }
 
@@ -19,7 +21,11 @@ html {
 }
 .top {
 	/*background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+");*/
-	background-image: url("../img/wallhaven-310735.jpg");
+	background-image: url("../img/wallhaven-310735.jpg"); 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 }
 
 .container { /* interesante */
