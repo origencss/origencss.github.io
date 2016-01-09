@@ -45,10 +45,11 @@ html {
 	padding: 0;
 	color: rgba(255,255,255,1);
 	text-transform: uppercase;
+	font-weight: normal;
 }
 .logo p {
 	margin-top: -40px;
-	font-size: 6em;
+	font-size: 5.9em;
 	color: #e8e7e7;
 	line-height: 0.7;
 }
