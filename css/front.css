@@ -123,13 +123,44 @@ p {
     line-height: 1.4;
 	font-size: 18px;
 }
+hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	opacity: 0.3;
+}
 .foot {
 	height: 150px;
 	background-color: rgba(40,40,40,1);
 	color: rgba(255,255,255,0.75);
 	font-size: 14px;
 	padding-top: 40px;
+}
+.no-node {
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+	list-style-type: none;
 
+}
+.more li {
+	margin-bottom: 15px;
+}
+.showgrid [class*='col-'] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FFC2C2;
+    background-color: #FFC2C2;
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+
+}
+.html {
+    padding: 16px;
+	display:block;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
 }
 
 .foot ul {

@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Origen</title>
-<link rel="icon" type="image/png" href="img/favicon.ico">
+<link rel="icon" type="image/png" href="../img/favicon.ico">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" style="text/css" href="../css/origen.css" >
 <link rel="stylesheet" style="text/css" href="../css/front.css" >
@@ -15,8 +15,9 @@
 				<div class="col-xs-1"><span class="mini-logo"><a href="../">Origen</a></div>
 				<div class="col-xs-11">
 					<ul>
-						<li>Current version: 0.2.1-alpha</li>
-						<li><a href="https://github.com/origencss/origen">Download at Github</a></li>
+						<li>Current version: 0.2.2-alpha</li>
+						<li><a href="https://github.com/origencss/origen/releases/download/0.2.2-alpha/origen-0.2.2-alpha-dist.zip">Download last release</a></li>
+						<li><a href="https://github.com/origencss/origen">Github</a></li>
 						<li><a href="../docs/" class="active">Documentation</a></li>
 					</ul>
 				</div>
@@ -28,13 +29,126 @@
 		<div class="row">
 			<div class="col-xs-10">
 
-					<h1>The alternative css framework that you've been waiting for</h1>
-					<p>Inspired by today's leading frameworks as Bootstrap or Foundation aims to be a new tool to facilitate websites development</p>
+					<h1><a name="getting-started">Getting Started</a></h1>
+					<p>First of all, you need to download the framework, you have few option here: 
+						<ul class="more">
+							<li>Download zip of the last realse from here: <a href="https://github.com/origencss/origen/releases/download/0.2.2-alpha/origen-0.2.2-alpha-dist.zip">Click here.</a></li>
+							<li>or clone the repo, command: <b>git clone https://github.com/origencss/origen.git</b> </li>
+						</ul>
+					</p>
+					<p>Copy the file css directory in your site and link the origen.css as a stylesheet in the head of your html: 
+					<ul class="no-node">
+							<li><code class="html"> &lt;link rel=&quot;stylesheet&quot; style=&quot;text/css&quot; href=&quot;css/origen.css&quot; &gt;</code> </li>
+						</ul>
+					</p>
+
+					<hr>
+
+					<h1><a name="basic-template">Basic template</a></h1>
+					<p>You can use our basic template to start your project, here is the code feel free to change what you want:  </p>
+			
+
+					<code class="html">&lt;!DOCTYPE html&gt;
+										&lt;html lang=&quot;en&quot;&gt;<br>
+										&lt;head&gt;<br>
+										&lt;meta charset=&quot;utf-8&quot;&gt;<br>
+										&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;<br>
+										&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;<br>
+
+										&lt;title&gt;Origen template&lt;/title&gt;<br>
+
+										&lt;!-- Origen css framework --&gt;<br>
+										&lt;link href=&quot;css/origen.css&quot; rel=&quot;stylesheet&quot;&gt;<br>
+
+										&lt;/head&gt;<br>
+										&lt;body&gt;<br>
+
+										&lt;h1&gt;Hello, I&#39;m using Origen!&lt;/h1&gt;<br>
+
+										&lt;/body&gt;<br>
+										&lt;/html&gt;
+					</code>
+				
+					<hr>
+
+					<h1><a name="grid-system">Grid system</a></h1>
+					<p>We have a 12 columns grid system similar to the bootstrap grid, with a separation (gutter width) of 12px each side. To use the grid you need to:</p>
+					<ul class="more">
+						<li>Declarate a div with the class "container".</li>
+						<li>Into the container you can add the rows, div with the class "row"</li>
+						<li>Into the rows you can put columns with differents sizes, where * is a number between 1 and 12</li>
+						<ul>
+							<li><b>col-xs-*</b>: Default sizes of columns</li>
+							<li><b>col-sm-*</b>: Small size column (min-width: 768px)</li>
+							<li><b>col-md-*</b>: Medium size column (min-width: 991px)</li>
+							<li><b>col-lg-*</b>: Large size column (min-width: 1200px)</li>
+						</ul>
+					</ul>
+					<p> You can use this to create responsive designs, like this: </li>
+					
+						<div class="container">
+							<div class="row showgrid">
+							  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+							  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+							</div>
+						</div>
+
+						<code class="html" style="margin-top:20px;">
+					&lt;div class=&quot;container&quot;&gt;<br>
+							&lt;div class=&quot;row&quot;&gt;<br>
+							  &lt;div class=&quot;col-xs-12 col-sm-6 col-md-8&quot;&gt;.col-xs-12 .col-sm-6 .col-md-8&lt;/div&gt;<br>
+							  &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;<br>
+							&lt;/div&gt;<br>
+						&lt;/div&gt;
+					</code>
+
+					<p>12 mid stackables columns:</li>
+
+					<div class="container">
+						<div class="row showgrid">
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						  <div class="col-md-1">.col-md-1</div>
+						</div>
+					</div>
+
+
+					<code class="html" style="margin-top:20px;">
+						&lt;div class=&quot;container&quot;&gt;<br>
+						  &lt;div class=&quot;row&quot;&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;<br>
+						&lt;/div&gt;<br>
+						&lt;/div&gt;
+					</code>
+					<hr>
+			
 
 			</div>
 			<div class="col-xs-2">
 				<ul>
-					<li>Getting Started</li>
+					<li><a href="#getting-started">Getting Started</a></li>
+					<li><a href="#basic-template">Basic template</a></li>
+					<li><a href="#grid-system">Grid system</a></li>
 				</ul>
 			</div>
 		</div>
