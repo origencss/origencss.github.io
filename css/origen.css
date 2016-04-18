@@ -1,4 +1,4 @@
-/* Origen by Migueladn version (0.1.1-alpha) */
+/* Origen by Migueladn version (0.2.3-alpha) */
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -545,5 +545,86 @@ th {
 
   .col-lg-12 {
     width: 100%; } }
+/* Typography */
+html {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  background: #fff;
+  color: #333;
+  line-height: 1.6; }
+
+/* Headings */
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 24px; }
+
+/* Paragraphs */
+p {
+  margin-bottom: 24px; }
+
+/* Divider */
+hr {
+  max-width: 75rem;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #cacaca;
+  margin: 1.25rem auto;
+  clear: both; }
+
+/* Blockquotes */
+blockquote {
+  display: block;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  background: #f9f9f9;
+  border-left: 6px solid #ccc; }
+
+cite {
+  display: block;
+  font-weight: bold; }
+  cite :before {
+    content: '\2014 \0020'; }
+
+/* Code && Keystrokes */
+code, samp, kbd {
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  text-align: left;
+  color: #555; }
+
+pre {
+  tab-size: 2;
+  padding: 10px 20px;
+  border-left: 6px solid #ccc;
+  background: #f9f9f9;
+  overflow: auto;
+  white-space: pre-wrap; }
+  pre code {
+    text-align: inline;
+    line-height: 1.6em;
+    font-size: 16px; }
+
+/* Highlight text */
+mark {
+  background-color: #fcf8e3; }
 
 /*# sourceMappingURL=origen.css.map */
