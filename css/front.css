@@ -1,13 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
 html,body {
 	
 	display: flex;
  	min-height: 100vh;
 	flex-direction: column;
-
+	font-family: 'Roboto', sans-serif;
+	color: #212121;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
 
 }
-html {
-	background-color: rgba(0,0,0,0.07);
+
+p a {
+	color: #2962ff;
+	text-decoration: none;
+}
+
+blockquote p::before {
+    content: open-quote;
+}
+
+blockquote p {
+	margin: 0 !important;
+
+}
+blockquote span {
+	font-weight: bold;
+}
+blockquote p::after {
+    content: close-quote;
+}
+blockquote p:last-child:after {content: '”'; content: close-quote;}
+
+blockquote {
+    font-family: "Roboto Mono", Roboto, sans-serif;
+    font-weight: 400;
+    quotes: "“" "”" "‘" "’";
+
+}
+
+
+blockquote cite::before {
+	content: "— ";
+}
+code {
+	background-color: #fff;
+  
+}
+code pre {
+	
+
+
+
+	 background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	border-radius: 4px;
+
+
 }
 @font-face {
 	font-family: Dense;
@@ -209,7 +260,14 @@ hr {
 .doc-samples {
   padding: 10px 20px;
   border-left: 6px solid #ccc;
-  background: #f9f9f9;
+  background-color: #fafafa;
 
+  background-color: #fafafa;
 
+background-color: #fff;
+  border: 1px solid #eee;
+  background-color: #fff;
+border-color: #ddd;
+border-width: 1px;
+border-radius: 4px 4px 0 0;
 }
