@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Origen by Migueladn version (0.2.3-alpha) */
 /* ==========================================================================
    Normalize.scss settings
@@ -16,6 +17,8 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -371,8 +374,6 @@ th {
 
 /* Flexbox grid system*/
 .container {
-  padding-right: 12px;
-  padding-left: 12px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -547,10 +548,10 @@ th {
     width: 100%; } }
 /* Typography */
 html {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   background: #fff;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
   line-height: 1.6; }
 
 /* Headings */
@@ -576,6 +577,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: 24px; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #212121;
+    text-decoration: none; }
+
+/* Links */
+a {
+  color: #2962ff;
+  text-decoration: none; }
 
 /* Paragraphs */
 p {
@@ -586,38 +595,51 @@ hr {
   max-width: 75rem;
   height: 0;
   border: 0;
-  border-bottom: 1px solid #cacaca;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   margin: 1.25rem auto;
   clear: both; }
 
 /* Blockquotes */
 blockquote {
-  display: block;
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  margin: 0;
   font-size: 17.5px;
-  background: #f9f9f9;
-  border-left: 6px solid #ccc; }
+  font-family: "Roboto Mono", Roboto, sans-serif;
+  font-weight: 400;
+  quotes: "“" "”" "‘" "’"; }
+  blockquote p::before {
+    content: open-quote; }
+  blockquote p::after {
+    content: close-quote; }
+  blockquote p {
+    margin: 0 !important; }
+  blockquote p:last-child:after {
+    content: '”';
+    content: close-quote; }
+  blockquote cite::before {
+    content: "— "; }
 
 cite {
   display: block;
   font-weight: bold; }
-  cite :before {
-    content: '\2014 \0020'; }
+  cite ::before {
+    content: "— "; }
 
 /* Code && Keystrokes */
 code, samp, kbd {
   font-family: "Courier New", Courier, monospace, sans-serif;
   text-align: left;
-  color: #555; }
+  color: #555;
+  background-color: #f7f7f9; }
 
 pre {
   tab-size: 2;
   padding: 10px 20px;
   border-left: 6px solid #ccc;
-  background: #f9f9f9;
+  background-color: #f7f7f9;
   overflow: auto;
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px; }
   pre code {
     text-align: inline;
     line-height: 1.6em;
@@ -625,6 +647,7 @@ pre {
 
 /* Highlight text */
 mark {
-  background-color: #fcf8e3; }
+  background-color: transparent !important;
+  background-image: linear-gradient(to bottom, #7dffb3, #7dffb3); }
 
 /*# sourceMappingURL=origen.css.map */
