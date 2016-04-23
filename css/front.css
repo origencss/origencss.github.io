@@ -6,60 +6,12 @@ html,body {
 	display: flex;
  	min-height: 100vh;
 	flex-direction: column;
-	font-family: 'Roboto', sans-serif;
-	color: #212121;
 	-webkit-text-size-adjust: 100%;
 	text-rendering: optimizeLegibility;
 
 }
 
-p a {
-	color: #2962ff;
-	text-decoration: none;
-}
 
-blockquote p::before {
-    content: open-quote;
-}
-
-blockquote p {
-	margin: 0 !important;
-
-}
-blockquote span {
-	font-weight: bold;
-}
-blockquote p::after {
-    content: close-quote;
-}
-blockquote p:last-child:after {content: '”'; content: close-quote;}
-
-blockquote {
-    font-family: "Roboto Mono", Roboto, sans-serif;
-    font-weight: 400;
-    quotes: "“" "”" "‘" "’";
-
-}
-
-
-blockquote cite::before {
-	content: "— ";
-}
-code {
-	background-color: #fff;
-  
-}
-code pre {
-	
-
-
-
-	 background-color: #f7f7f9;
-	border: 1px solid #e1e1e8;
-	border-radius: 4px;
-
-
-}
 @font-face {
 	font-family: Dense;
 	src: url("../fonts/dense.regular.otf") format("opentype");
@@ -257,17 +209,26 @@ hr {
 
 }
 
-.doc-samples {
-  padding: 10px 20px;
-  border-left: 6px solid #ccc;
-  background-color: #fafafa;
+.box-samples {
+	padding: 10px 20px;
+	border-left: 6px solid #ccc;
+	border: 1px solid #eee;
+	background-color: #fff;
+	border-color: #ddd;
+	border-width: 1px;
+	border-radius: 4px 4px 0 0;
+}
 
-  background-color: #fafafa;
-
-background-color: #fff;
-  border: 1px solid #eee;
-  background-color: #fff;
-border-color: #ddd;
-border-width: 1px;
-border-radius: 4px 4px 0 0;
+.lateral-menu {
+	list-style-type: none;
+	margin-left:0;
+}
+.lateral-menu li {
+	font-weight:bold;
+}
+.lateral-menu li a {
+	color: black;
+}
+.lateral-menu ul li {
+	font-weight: normal;
 }
