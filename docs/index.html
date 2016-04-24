@@ -6,9 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Origen</title>
 	<link rel="icon" type="image/png" href="../img/favicon.ico">
-	 <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
 	<!--  <link rel="stylesheet" style="text/css" href="../../origen/dist/css/origen.css" > -->
-	<link rel="stylesheet" style="text/css" href="../css/origen.css" > 
+	 <link rel="stylesheet" style="text/css" href="../css/origen.css" > 
 	<link rel="stylesheet" style="text/css" href="../css/front.css" >
 </head>
 <body>
@@ -19,8 +18,8 @@
 				<div class="col-xs-1"><span class="mini-logo"><a href="../">Origen</a></div>
 				<div class="col-xs-11">
 					<ul>
-						<li>Current version: 0.3.0-alpha</li>
-						<li><a href="https://github.com/origencss/origen/releases/download/0.3.0-alpha/origen-0.3.0-alpha-dist.zip">Download last release</a></li>
+						<li>Current version: 0.4.0-alpha</li>
+						<li><a href="https://github.com/origencss/origen/releases/download/0.4.0-alpha/origen-0.4.0-alpha-dist.zip">Download last release</a></li>
 						<li><a href="https://github.com/origencss/origen">Github</a></li>
 						<li><a href="../docs/" class="active">Documentation</a></li>
 					</ul>
@@ -33,29 +32,33 @@
 		<div class="row">
 			<div class="col-xs-9">
 
-					<h1><a name="introduction">Introduction</a></h1>
-					<p>...</p>
+					<h1><a name="getting-started">Getting Started</a></h1>
+					<p>Get familiar with the setup and structure of Origen.</p>
 						
 			
 
-					<h2><a name="getting-started">Getting Started</a></h2>
-					<p>First of all, you need to download the framework, you have few option here: 
-						<ul class="more">
-							<li><p>Download zip of the last release from here: <a href="https://github.com/origencss/origen/releases/download/0.3.0-alpha/origen-0.3.0-alpha-dist.zip">Click here.</a></p></li>
-							<li><p>or clone the repo, command: <b>git clone https://github.com/origencss/origen.git</b></p></li>
+					<h2><a name="installation">Installation</a></h2>
+					<p>First of all, you need to download the framework, you can find the source of this proyect on <a href="https://github.com/origencss/origen">Github</a>.</p>
+					<a class="button-primary" href="https://github.com/origencss/origen/releases/download/0.4.0-alpha/origen-0.4.0-alpha-dist.zip">Download Origen</a>
+					<p>The download contains all CSS, JavaScript and font files to use in your proyect. Copy the css, js and fonts directories in your site and link the origen.css as a stylesheet in the head of your html and origen.js file in the body. Also <a href="https://jquery.com/">jQuery</a> is needed after the origen.js file. 
+					<ul class="no-node">
+							<li><pre><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; style=&quot;text/css&quot; href=&quot;css/origen.css&quot; &gt;</code></pre> </li>
 						</ul>
 					</p>
-					<p>Copy the file css directory in your site and link the origen.css as a stylesheet in the head of your html: 
+
 					<ul class="no-node">
-							<li><code><pre>&lt;link rel=&quot;stylesheet&quot; style=&quot;text/css&quot; href=&quot;css/origen.css&quot; &gt;</pre></code> </li>
+							<li><pre><code class="language-markup">&lt;!-- jQuery --&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Main origen javascript file--&gt;
+&lt;script src=&quot;js/origen.js&quot;&gt;&lt;/script&gt;</code></pre> </li>
 						</ul>
 					</p>
 
 			
 
 					<h2><a name="basic-template">Basic template</a></h2>
-					<p>You can use our basic template to start your project, here is the code feel free to change what you want:  </p>
-					<code ><pre>&lt;!DOCTYPE html&gt; 
+					<p>You can use our basic template to start your project, here is the code feel free to change what you want but remember that you need to put the compiled CSS and Javascript to the header of your HTML5 document:  </p>
+					<pre><code class="language-markup">&lt;!DOCTYPE html&gt; 
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
       &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -66,18 +69,22 @@
       &lt;link href=&quot;css/origen.css&quot; rel=&quot;stylesheet&quot;&gt;
     &lt;/head&gt;
     &lt;body&gt;
-       &lt;h1&gt;Hello, I'm using Origen!&lt;/h1&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</pre></code>
+
+		&lt;h1&gt;Hello, I'm using Origen!&lt;/h1&gt;
+
+		&lt;!-- jQuery --&gt;
+		&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+		&lt;!-- Main origen javascript file--&gt;
+		&lt;script src=&quot;js/origen.js&quot;&gt;&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 					<hr>
 					
 					<h1><a name="layout">Layout</a></h1>
-					<p>...</p>
+					<p>Origen includes a flexible grid that ensures consistency across responsive layouts adapting content to any possible screen size.</p>
 						
-
-
 					<h2><a name="grid-system">Grid system</a></h2>
-					<p>We have a 12 columns grid system similar to the bootstrap grid, with a separation (gutter width) of 12px each side. To use the grid you need to:</p>
+					<p>We have a 12 columns grid system similar others frameworks, with a separation (gutter width) of 12px each side. The grid creates flexibility across a wide variety of designs. To use the grid you need to:</p>
 					<ul class="more">
 						<li>Declarate a div with the class "container".</li>
 						<li>Into the container you can add the rows, div with the class "row"</li>
@@ -97,12 +104,12 @@
 							  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 							</div>
 						</div>
-					<code><pre>&lt;div class=&quot;container&quot;&gt;
+					<pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-xs-12 col-sm-6 col-md-8&quot;&gt;.col-xs-12 .col-sm-6 .col-md-8&lt;/div&gt;
       &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre></code>
+&lt;/div&gt;</code></pre>
 
 					<p>12 mid stackables columns:</li>
 
@@ -124,7 +131,7 @@
 					</div>
 
 
-					<code><pre>&lt;div class=&quot;container&quot;&gt;
+					<pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
     &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
@@ -139,11 +146,11 @@
     &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
     &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre></code>
+&lt;/div&gt;</code></pre>
 					<hr>
 					
 					<h1><a name="typography">Typography</a></h1>
-					<p>...</p>
+					<p>We choose <a href="https://www.google.com/fonts/specimen/Roboto">Roboto</a>, a font create by <a href="https://plus.google.com/110879635926653430880/about">Christian Robertson</a> as the stantard font on the framework.</p>
 
 					<h2><a name="headers">Headers</a></h2>
 					<p>Origen includes styles for all headings:</p>
@@ -155,12 +162,12 @@
 						<h5>h5. Small header.</h5>
 						<h6>h6. Tiny header.</h6>
 					</div>
-					<code><pre>&lt;h1&gt;h1. Very large header.&lt;/h1&gt;
+					<pre><code class="language-markup">&lt;h1&gt;h1. Very large header.&lt;/h1&gt;
 &lt;h2&gt;h2. Large header.&lt;/h2&gt;
 &lt;h3&gt;h3. Medium header.&lt;/h3&gt;
 &lt;h4&gt;h4. Moderate header.&lt;/h4&gt;
 &lt;h5&gt;h5. Small header.&lt;/h5&gt;
-&lt;h6&gt;h6. Tiny header.&lt;/h6&gt;</pre></code>
+&lt;h6&gt;h6. Tiny header.&lt;/h6&gt;</code></pre>
 
 				
 					<h2><a name="paragraphs">Paragraphs</a></h2>
@@ -175,12 +182,12 @@
 							Suspendisse ultrices feugiat nisl, a porta libero volutpat non. Aliquam posuere dapibus lacus, iaculis ullamcorper erat tempor a. Morbi tempus justo ac tincidunt ultrices. Maecenas leo enim, euismod quis libero ut, viverra finibus ipsum. Aenean convallis lobortis magna, ac mollis risus sodales sed. Integer ornare sollicitudin nisi, id luctus nunc tempor non. Mauris venenatis elit pulvinar, rhoncus ante ut, luctus est. 
 						</p>
 					</div>
-					<code><pre>&lt;p&gt;..&lt;/p&gt;</pre></code>
+					<pre><code class="language-markup">&lt;p&gt;..&lt;/p&gt;</code></pre>
 	
 			
 					<h2><a name="dividers">Dividers</a></h2>
 					<p>You can use dividers to define breaks between paragraphs.</p>
-					<code><pre>&lt;hr&gt;</pre></code>
+					<pre><code class="language-markup">&lt;hr&gt;</code></pre>
 
 			
 					<h2><a name="blockquotes">Blockquotes</a></h2>
@@ -191,37 +198,1086 @@
 						  <cite>Winston Churchill</cite>
 						</blockquote>
 					</div>
-					<code><pre>&lt;blockquote&gt;
+					<pre><code class="language-markup">&lt;blockquote&gt;
    &lt;p&gt;Attitude is a little thing that makes a big difference.&lt;/p&gt;
    &lt;cite&gt;Winston Churchill&lt;/cite&gt;
-&lt;/blockquote&gt;</pre></code>
+&lt;/blockquote&gt;</code></pre>
 					
 				
 					<h2><a name="code">Code</a></h2>
-					<p>Format references to code with the &lt;code&gt; tag.You must escape angle brackets.</p>
-					<code><pre>#include &lt;stdio.h&gt;
+					<p>Origen use the <a href="http://prismjs.com/">Prism JS</a> library that its usefull to highlight the text of the code. We add support to Markup, CSS, C-like and JavaScript languages. Format references to code with the &ltpre&gt; and &lt;code&gt; tags.You must escape angle brackets.</p>
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Language</th>
+								<th>Class name</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Markup</td>
+							<td>language-markup</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+							<td>language-css</td>
+						</tr>
+						<tr>
+							<td>C-like</td>
+							<td>language-clike</td>
+						</tr>				
+						<tr>
+							<td>JavasScript</td>
+							<td>language-javascript</td>
+						</tr>
+					</table>
+					<p>For example, this is how a C-like language looks like:</p>
+					<pre><code class="language-clike">#include &lt;stdio.h&gt;
 
 main( ) 
 {
         printf(&quot;hello, world\n&quot;);
-}</pre></code>
+}</code></pre>
+					<pre><code class="language-markup">&lt;pre&gt;&lt;code class=&quot;language-clike&quot;&gt; .. &lt;/pre&gt;&lt;/code&gt;</code></pre>
 
+					
 			
 					<h2><a name="highlight">Highlight</a></h2>
 					<p>You can draw attention to sections of text by marking them with the &lt;mark&gt; tag.</p>
 					<div class="box-samples">
 						<p><mark>Example of highlighting text.</mark></p>
 					</div>
-					<code><pre>&lt;mark&gt;Example of highlighting text.&lt;/mark&gt;</pre></code>
+					<pre><code class="language-markup">&lt;mark&gt;Example of highlighting text.&lt;/mark&gt;</code></pre>
+
+					<hr>
+
+					<h1><a name="ui-kit">UI Kit</a></h2>
+					<p>The UI Kit module provides a lot of elements needed to manage a website user interface.</p>
+
+					<h2><a name="buttons">Buttons</a></h2>
+					<p>Buttons comumunicates that an action occur when user activates it. There are five types of buttons:</p>
+					<ul>
+						<li>Button: the class .button or .button-default with a white color.</li>
+						<li>Primary button: class .button-primary with a blue color.</li>
+						<li>Danger button: class .button-danger with a red color.</li>
+						<li>Success button: class .button-success with a green color.</li>
+						<li>Warning button: class .button-warning with a orange color.</li>
+					</ul>
+					<div class="box-samples">
+						<button class="button">Default</button>
+						<button class="button-primary">Primary</button>
+						<button class="button-danger">Danger</button>
+						<button class="button-success">Success</button>
+						<button class="button-warning">Warning</button>
+					</div>
+					<pre><code class="language-markup">&lt;button class=&quot;button&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;button-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;button-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button class=&quot;button-success&quot;&gt;Success&lt;/button&gt;
+&lt;button class=&quot;button-warning&quot;&gt;Warning&lt;/button&gt;</code></pre>
+
+					<h2><a name="tables">Tables</a></h2>
+					<p>Tables display data. It contains a header row at the top that lists columns:</p>
+
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>Points</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td>Jill</td>
+								<td>Smith</td> 
+								<td>94</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Eve</td>
+								<td>Jackson</td> 
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>John</td>
+								<td>Doe</td> 
+								<td>34</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Adam</td>
+								<td>Johnson</td> 
+								<td>20</td>
+							</tr>
+						</table>
+
+					<pre><code class="language-markup">&lt;table class=&quot;table&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;First Name&lt;/th&gt;
+			&lt;th&gt;Last Name&lt;/th&gt;
+			&lt;th&gt;Points&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;Jill&lt;/td&gt;
+			&lt;td&gt;Smith&lt;/td&gt; 
+		&lt;td&gt;94&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;Eve&lt;/td&gt;
+			&lt;td&gt;Jackson&lt;/td&gt; 
+			&lt;td&gt;50&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;John&lt;/td&gt;
+			&lt;td&gt;Doe&lt;/td&gt; 
+			&lt;td&gt;34&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;Adam&lt;/td&gt;
+			&lt;td&gt;Johnson&lt;/td&gt; 
+			&lt;td&gt;20&lt;/td&gt;
+		&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+					<p>Also you can add a striped style adding the class .table-striped in your code:</td>
+
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>Points</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td>Jill</td>
+								<td>Smith</td> 
+								<td>94</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Eve</td>
+								<td>Jackson</td> 
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>John</td>
+								<td>Doe</td> 
+								<td>34</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Adam</td>
+								<td>Johnson</td> 
+								<td>20</td>
+							</tr>
+						</table>
+
+					<pre><code class="language-markup">&lt;table class=&quot;table table-striped&quot;&gt;
+...
+&lt;/table&gt;</code></pre>
+
+
+					<h2><a name="icons">Icons</a></h2>
+					<p>This framework uses the iconic font and css toolkit called <a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a>. Use an icon is very simple:</p>
+					<div class="box-samples">
+						<i class="fa fa-twitter" aria-hidden="true"></i> fa-twitter
+					</div>
+					<pre><code class="language-markup">&lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; fa-twitter</code></pre>
+					
+					<p>Also you can stack the icon into a frame:</p>
+					<div class="box-samples">
+						<span class="fa-stack fa-lg">
+						  <i class="fa fa-square-o fa-stack-2x"></i>
+						  <i class="fa fa-twitter fa-stack-1x"></i>
+						</span>
+					</div>
+					<pre><code class="language-markup">&lt;span class=&quot;fa-stack fa-lg&quot;&gt;
+  &lt;i class=&quot;fa fa-square-o fa-stack-2x&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;fa fa-twitter fa-stack-1x&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+
+					<p>The are a complete set of 628 icons in the version that we use at this moment (4.6.1). These are examples of icons that you can use:</p>
+
+					<div class="row">
+					<div class="col-xs-6 col-sm-3 col-md-3">
+					<ul class="ul-icon">
+						<li><i class="fa fa-adjust" aria-hidden="true"></i> <span class="sr-only">Example of </span>adjust</li>
+
+						<li><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i> <span class="sr-only">Example of </span>american-sign-language-interpreting</li>
+
+						<li><i class="fa fa-anchor" aria-hidden="true"></i> <span class="sr-only">Example of </span>anchor</li>
+
+						<li><i class="fa fa-archive" aria-hidden="true"></i> <span class="sr-only">Example of </span>archive</li>
+
+						<li><i class="fa fa-area-chart" aria-hidden="true"></i> <span class="sr-only">Example of </span>area-chart</li>
+
+						<li><i class="fa fa-arrows" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows</li>
+
+						<li><i class="fa fa-arrows-h" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows-h</li>
+
+						<li><i class="fa fa-arrows-v" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows-v</li>
+
+						<li><i class="fa fa-asl-interpreting" aria-hidden="true"></i> <span class="sr-only">Example of </span>asl-interpreting <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-assistive-listening-systems" aria-hidden="true"></i> <span class="sr-only">Example of </span>assistive-listening-systems</li>
+
+						<li><i class="fa fa-asterisk" aria-hidden="true"></i> <span class="sr-only">Example of </span>asterisk</li>
+
+						<li><i class="fa fa-at" aria-hidden="true"></i> <span class="sr-only">Example of </span>at</li>
+
+						<li><i class="fa fa-audio-description" aria-hidden="true"></i> <span class="sr-only">Example of </span>audio-description</li>
+
+						<li><i class="fa fa-automobile" aria-hidden="true"></i> <span class="sr-only">Example of </span>automobile <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-balance-scale" aria-hidden="true"></i> <span class="sr-only">Example of </span>balance-scale</li>
+
+						<li><i class="fa fa-ban" aria-hidden="true"></i> <span class="sr-only">Example of </span>ban</li>
+
+						<li><i class="fa fa-bank" aria-hidden="true"></i> <span class="sr-only">Example of </span>bank <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="sr-only">Example of </span>bar-chart</li>
+
+						<li><i class="fa fa-bar-chart-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>bar-chart-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-barcode" aria-hidden="true"></i> <span class="sr-only">Example of </span>barcode</li>
+
+						<li><i class="fa fa-bars" aria-hidden="true"></i> <span class="sr-only">Example of </span>bars</li>
+
+						<li><i class="fa fa-battery-0" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-0 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-battery-1" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-1 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-battery-2" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-2 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-battery-3" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-3 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-battery-4" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-4 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-battery-empty" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-empty</li>
+
+						<li><i class="fa fa-battery-full" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-full</li>
+
+						<li><i class="fa fa-battery-half" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-half</li>
+
+						<li><i class="fa fa-battery-quarter" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-quarter</li>
+
+						<li><i class="fa fa-battery-three-quarters" aria-hidden="true"></i> <span class="sr-only">Example of </span>battery-three-quarters</li>
+
+						<li><i class="fa fa-bed" aria-hidden="true"></i> <span class="sr-only">Example of </span>bed</li>
+
+						<li><i class="fa fa-beer" aria-hidden="true"></i> <span class="sr-only">Example of </span>beer</li>
+
+						<li><i class="fa fa-bell" aria-hidden="true"></i> <span class="sr-only">Example of </span>bell</li>
+
+						<li><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>bell-o</li>
+
+						<li><i class="fa fa-bell-slash" aria-hidden="true"></i> <span class="sr-only">Example of </span>bell-slash</li>
+
+						<li><i class="fa fa-bell-slash-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>bell-slash-o</li>
+
+						<li><i class="fa fa-bicycle" aria-hidden="true"></i> <span class="sr-only">Example of </span>bicycle</li>
+
+						<li><i class="fa fa-binoculars" aria-hidden="true"></i> <span class="sr-only">Example of </span>binoculars</li>
+
+						<li><i class="fa fa-birthday-cake" aria-hidden="true"></i> <span class="sr-only">Example of </span>birthday-cake</li>
+
+						<li><i class="fa fa-blind" aria-hidden="true"></i> <span class="sr-only">Example of </span>blind</li>
+
+						<li><i class="fa fa-bluetooth" aria-hidden="true"></i> <span class="sr-only">Example of </span>bluetooth</li>
+
+						<li><i class="fa fa-bluetooth-b" aria-hidden="true"></i> <span class="sr-only">Example of </span>bluetooth-b</li>
+
+						<li><i class="fa fa-bolt" aria-hidden="true"></i> <span class="sr-only">Example of </span>bolt</li>
+
+						<li><i class="fa fa-bomb" aria-hidden="true"></i> <span class="sr-only">Example of </span>bomb</li>
+
+						<li><i class="fa fa-book" aria-hidden="true"></i> <span class="sr-only">Example of </span>book</li>
+
+						<li><i class="fa fa-bookmark" aria-hidden="true"></i> <span class="sr-only">Example of </span>bookmark</li>
+
+						<li><i class="fa fa-bookmark-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>bookmark-o</li>
+
+						<li><i class="fa fa-braille" aria-hidden="true"></i> <span class="sr-only">Example of </span>braille</li>
+
+						<li><i class="fa fa-briefcase" aria-hidden="true"></i> <span class="sr-only">Example of </span>briefcase</li>
+
+						<li><i class="fa fa-bug" aria-hidden="true"></i> <span class="sr-only">Example of </span>bug</li>
+
+						<li><i class="fa fa-building" aria-hidden="true"></i> <span class="sr-only">Example of </span>building</li>
+
+						<li><i class="fa fa-building-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>building-o</li>
+
+						<li><i class="fa fa-bullhorn" aria-hidden="true"></i> <span class="sr-only">Example of </span>bullhorn</li>
+
+						<li><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="sr-only">Example of </span>bullseye</li>
+
+						<li><i class="fa fa-bus" aria-hidden="true"></i> <span class="sr-only">Example of </span>bus</li>
+
+						<li><i class="fa fa-cab" aria-hidden="true"></i> <span class="sr-only">Example of </span>cab <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-calculator" aria-hidden="true"></i> <span class="sr-only">Example of </span>calculator</li>
+
+						<li><i class="fa fa-calendar" aria-hidden="true"></i> <span class="sr-only">Example of </span>calendar</li>
+
+						<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>calendar-check-o</li>
+
+						<li><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>calendar-minus-o</li>
+
+						<li><i class="fa fa-calendar-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>calendar-o</li>
+
+						<li><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>calendar-plus-o</li>
+
+						<li><i class="fa fa-calendar-times-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>calendar-times-o</li>
+
+						<li><i class="fa fa-camera" aria-hidden="true"></i> <span class="sr-only">Example of </span>camera</li>
+
+						<li><i class="fa fa-camera-retro" aria-hidden="true"></i> <span class="sr-only">Example of </span>camera-retro</li>
+
+						<li><i class="fa fa-car" aria-hidden="true"></i> <span class="sr-only">Example of </span>car</li>
+
+						<li><i class="fa fa-caret-square-o-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-down</li>
+
+						<li><i class="fa fa-caret-square-o-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-left</li>
+
+						<li><i class="fa fa-caret-square-o-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-right</li>
+
+						<li><i class="fa fa-caret-square-o-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-up</li>
+
+						<li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>cart-arrow-down</li>
+
+						<li><i class="fa fa-cart-plus" aria-hidden="true"></i> <span class="sr-only">Example of </span>cart-plus</li>
+
+						<li><i class="fa fa-cc" aria-hidden="true"></i> <span class="sr-only">Example of </span>cc</li>
+
+						<li><i class="fa fa-certificate" aria-hidden="true"></i> <span class="sr-only">Example of </span>certificate</li>
+
+						<li><i class="fa fa-check" aria-hidden="true"></i> <span class="sr-only">Example of </span>check</li>
+
+						<li><i class="fa fa-check-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>check-circle</li>
+
+						<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>check-circle-o</li>
+
+						<li><i class="fa fa-check-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>check-square</li>
+
+						<li><i class="fa fa-check-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>check-square-o</li>
+
+						<li><i class="fa fa-child" aria-hidden="true"></i> <span class="sr-only">Example of </span>child</li>
+
+						<li><i class="fa fa-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle</li>
+
+						<li><i class="fa fa-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle-o</li>
+
+						<li><i class="fa fa-circle-o-notch" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle-o-notch</li>
+
+						<li><i class="fa fa-circle-thin" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle-thin</li>
+
+						<li><i class="fa fa-clock-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>clock-o</li>
+
+						<li><i class="fa fa-clone" aria-hidden="true"></i> <span class="sr-only">Example of </span>clone</li>
+
+						<li><i class="fa fa-close" aria-hidden="true"></i> <span class="sr-only">Example of </span>close <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-cloud" aria-hidden="true"></i> <span class="sr-only">Example of </span>cloud</li>
+
+						<li><i class="fa fa-cloud-download" aria-hidden="true"></i> <span class="sr-only">Example of </span>cloud-download</li>
+
+						<li><i class="fa fa-cloud-upload" aria-hidden="true"></i> <span class="sr-only">Example of </span>cloud-upload</li>
+
+						<li><i class="fa fa-code" aria-hidden="true"></i> <span class="sr-only">Example of </span>code</li>
+
+						<li><i class="fa fa-code-fork" aria-hidden="true"></i> <span class="sr-only">Example of </span>code-fork</li>
+
+						<li><i class="fa fa-coffee" aria-hidden="true"></i> <span class="sr-only">Example of </span>coffee</li>
+
+						<li><i class="fa fa-cog" aria-hidden="true"></i> <span class="sr-only">Example of </span>cog</li>
+
+						<li><i class="fa fa-cogs" aria-hidden="true"></i> <span class="sr-only">Example of </span>cogs</li>
+
+						<li><i class="fa fa-comment" aria-hidden="true"></i> <span class="sr-only">Example of </span>comment</li>
+
+						<li><i class="fa fa-comment-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>comment-o</li>
+
+						<li><i class="fa fa-commenting" aria-hidden="true"></i> <span class="sr-only">Example of </span>commenting</li>
+
+						<li><i class="fa fa-commenting-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>commenting-o</li>
+
+						<li><i class="fa fa-comments" aria-hidden="true"></i> <span class="sr-only">Example of </span>comments</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3">
+						<ul class="ul-icon">
+						<li><i class="fa fa-comments-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>comments-o</li>
+
+						<li><i class="fa fa-compass" aria-hidden="true"></i> <span class="sr-only">Example of </span>compass</li>
+
+						<li><i class="fa fa-copyright" aria-hidden="true"></i> <span class="sr-only">Example of </span>copyright</li>
+
+						<li><i class="fa fa-creative-commons" aria-hidden="true"></i> <span class="sr-only">Example of </span>creative-commons</li>
+
+						<li><i class="fa fa-credit-card" aria-hidden="true"></i> <span class="sr-only">Example of </span>credit-card</li>
+
+						<li><i class="fa fa-credit-card-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>credit-card-alt</li>
+
+						<li><i class="fa fa-crop" aria-hidden="true"></i> <span class="sr-only">Example of </span>crop</li>
+
+						<li><i class="fa fa-crosshairs" aria-hidden="true"></i> <span class="sr-only">Example of </span>crosshairs</li>
+
+						<li><i class="fa fa-cube" aria-hidden="true"></i> <span class="sr-only">Example of </span>cube</li>
+
+						<li><i class="fa fa-cubes" aria-hidden="true"></i> <span class="sr-only">Example of </span>cubes</li>
+
+						<li><i class="fa fa-cutlery" aria-hidden="true"></i> <span class="sr-only">Example of </span>cutlery</li>
+
+						<li><i class="fa fa-dashboard" aria-hidden="true"></i> <span class="sr-only">Example of </span>dashboard <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-database" aria-hidden="true"></i> <span class="sr-only">Example of </span>database</li>
+
+						<li><i class="fa fa-deaf" aria-hidden="true"></i> <span class="sr-only">Example of </span>deaf</li>
+
+						<li><i class="fa fa-deafness" aria-hidden="true"></i> <span class="sr-only">Example of </span>deafness <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-desktop" aria-hidden="true"></i> <span class="sr-only">Example of </span>desktop</li>
+
+						<li><i class="fa fa-diamond" aria-hidden="true"></i> <span class="sr-only">Example of </span>diamond</li>
+
+						<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>dot-circle-o</li>
+
+						<li><i class="fa fa-download" aria-hidden="true"></i> <span class="sr-only">Example of </span>download</li>
+
+						<li><i class="fa fa-edit" aria-hidden="true"></i> <span class="sr-only">Example of </span>edit <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-ellipsis-h" aria-hidden="true"></i> <span class="sr-only">Example of </span>ellipsis-h</li>
+
+						<li><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span class="sr-only">Example of </span>ellipsis-v</li>
+
+						<li><i class="fa fa-envelope" aria-hidden="true"></i> <span class="sr-only">Example of </span>envelope</li>
+
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>envelope-o</li>
+
+						<li><i class="fa fa-envelope-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>envelope-square</li>
+
+						<li><i class="fa fa-eraser" aria-hidden="true"></i> <span class="sr-only">Example of </span>eraser</li>
+
+						<li><i class="fa fa-exchange" aria-hidden="true"></i> <span class="sr-only">Example of </span>exchange</li>
+
+						<li><i class="fa fa-exclamation" aria-hidden="true"></i> <span class="sr-only">Example of </span>exclamation</li>
+
+						<li><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>exclamation-circle</li>
+
+						<li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span class="sr-only">Example of </span>exclamation-triangle</li>
+
+						<li><i class="fa fa-external-link" aria-hidden="true"></i> <span class="sr-only">Example of </span>external-link</li>
+
+						<li><i class="fa fa-external-link-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>external-link-square</li>
+
+						<li><i class="fa fa-eye" aria-hidden="true"></i> <span class="sr-only">Example of </span>eye</li>
+
+						<li><i class="fa fa-eye-slash" aria-hidden="true"></i> <span class="sr-only">Example of </span>eye-slash</li>
+
+						<li><i class="fa fa-eyedropper" aria-hidden="true"></i> <span class="sr-only">Example of </span>eyedropper</li>
+
+						<li><i class="fa fa-fax" aria-hidden="true"></i> <span class="sr-only">Example of </span>fax</li>
+
+						<li><i class="fa fa-feed" aria-hidden="true"></i> <span class="sr-only">Example of </span>feed <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-female" aria-hidden="true"></i> <span class="sr-only">Example of </span>female</li>
+
+						<li><i class="fa fa-fighter-jet" aria-hidden="true"></i> <span class="sr-only">Example of </span>fighter-jet</li>
+
+						<li><i class="fa fa-file-archive-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-archive-o</li>
+
+						<li><i class="fa fa-file-audio-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-audio-o</li>
+
+						<li><i class="fa fa-file-code-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-code-o</li>
+
+						<li><i class="fa fa-file-excel-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-excel-o</li>
+
+						<li><i class="fa fa-file-image-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-image-o</li>
+
+						<li><i class="fa fa-file-movie-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-movie-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-pdf-o</li>
+
+						<li><i class="fa fa-file-photo-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-photo-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-file-picture-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-picture-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-powerpoint-o</li>
+
+						<li><i class="fa fa-file-sound-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-sound-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-file-video-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-video-o</li>
+
+						<li><i class="fa fa-file-word-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-word-o</li>
+
+						<li><i class="fa fa-file-zip-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-zip-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-film" aria-hidden="true"></i> <span class="sr-only">Example of </span>film</li>
+
+						<li><i class="fa fa-filter" aria-hidden="true"></i> <span class="sr-only">Example of </span>filter</li>
+
+						<li><i class="fa fa-fire" aria-hidden="true"></i> <span class="sr-only">Example of </span>fire</li>
+
+						<li><i class="fa fa-fire-extinguisher" aria-hidden="true"></i> <span class="sr-only">Example of </span>fire-extinguisher</li>
+
+						<li><i class="fa fa-flag" aria-hidden="true"></i> <span class="sr-only">Example of </span>flag</li>
+
+						<li><i class="fa fa-flag-checkered" aria-hidden="true"></i> <span class="sr-only">Example of </span>flag-checkered</li>
+
+						<li><i class="fa fa-flag-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>flag-o</li>
+
+						<li><i class="fa fa-flash" aria-hidden="true"></i> <span class="sr-only">Example of </span>flash <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-flask" aria-hidden="true"></i> <span class="sr-only">Example of </span>flask</li>
+
+						<li><i class="fa fa-folder" aria-hidden="true"></i> <span class="sr-only">Example of </span>folder</li>
+
+						<li><i class="fa fa-folder-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>folder-o</li>
+
+						<li><i class="fa fa-folder-open" aria-hidden="true"></i> <span class="sr-only">Example of </span>folder-open</li>
+
+						<li><i class="fa fa-folder-open-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>folder-open-o</li>
+
+						<li><i class="fa fa-frown-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>frown-o</li>
+
+						<li><i class="fa fa-futbol-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>futbol-o</li>
+
+						<li><i class="fa fa-gamepad" aria-hidden="true"></i> <span class="sr-only">Example of </span>gamepad</li>
+
+						<li><i class="fa fa-gavel" aria-hidden="true"></i> <span class="sr-only">Example of </span>gavel</li>
+
+						<li><i class="fa fa-gear" aria-hidden="true"></i> <span class="sr-only">Example of </span>gear <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-gears" aria-hidden="true"></i> <span class="sr-only">Example of </span>gears <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-gift" aria-hidden="true"></i> <span class="sr-only">Example of </span>gift</li>
+
+						<li><i class="fa fa-glass" aria-hidden="true"></i> <span class="sr-only">Example of </span>glass</li>
+
+						<li><i class="fa fa-globe" aria-hidden="true"></i> <span class="sr-only">Example of </span>globe</li>
+
+						<li><i class="fa fa-graduation-cap" aria-hidden="true"></i> <span class="sr-only">Example of </span>graduation-cap</li>
+
+						<li><i class="fa fa-group" aria-hidden="true"></i> <span class="sr-only">Example of </span>group <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hand-grab-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-grab-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hand-lizard-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-lizard-o</li>
+
+						<li><i class="fa fa-hand-paper-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-paper-o</li>
+
+						<li><i class="fa fa-hand-peace-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-peace-o</li>
+
+						<li><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-pointer-o</li>
+
+						<li><i class="fa fa-hand-rock-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-rock-o</li>
+
+						<li><i class="fa fa-hand-scissors-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-scissors-o</li>
+
+						<li><i class="fa fa-hand-spock-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-spock-o</li>
+
+						<li><i class="fa fa-hand-stop-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-stop-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hard-of-hearing" aria-hidden="true"></i> <span class="sr-only">Example of </span>hard-of-hearing <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hashtag" aria-hidden="true"></i> <span class="sr-only">Example of </span>hashtag</li>
+
+						<li><i class="fa fa-hdd-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hdd-o</li>
+
+						<li><i class="fa fa-headphones" aria-hidden="true"></i> <span class="sr-only">Example of </span>headphones</li>
+
+						<li><i class="fa fa-heart" aria-hidden="true"></i> <span class="sr-only">Example of </span>heart</li>
+
+						<li><i class="fa fa-heart-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>heart-o</li>
+
+						<li><i class="fa fa-heartbeat" aria-hidden="true"></i> <span class="sr-only">Example of </span>heartbeat</li>
+
+						<li><i class="fa fa-history" aria-hidden="true"></i> <span class="sr-only">Example of </span>history</li>
+
+						<li><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">Example of </span>home</li>
+
+						<li><i class="fa fa-hotel" aria-hidden="true"></i> <span class="sr-only">Example of </span>hotel <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hourglass" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass</li>
+
+						<li><i class="fa fa-hourglass-1" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-1 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hourglass-2" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-2 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hourglass-3" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-3 <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-hourglass-end" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-end</li>
+
+						<li><i class="fa fa-hourglass-half" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-half</li>
+
+						<li><i class="fa fa-hourglass-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-o</li>
+
+					    </ul>
+						</div>
+						<div class="col-xs-6 col-sm-3 col-md-3">
+						<ul class="ul-icon">
+
+						<li><i class="fa fa-hourglass-start" aria-hidden="true"></i> <span class="sr-only">Example of </span>hourglass-start</li>
+
+						<li><i class="fa fa-i-cursor" aria-hidden="true"></i> <span class="sr-only">Example of </span>i-cursor</li>
+
+						<li><i class="fa fa-image" aria-hidden="true"></i> <span class="sr-only">Example of </span>image <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-inbox" aria-hidden="true"></i> <span class="sr-only">Example of </span>inbox</li>
+
+						<li><i class="fa fa-industry" aria-hidden="true"></i> <span class="sr-only">Example of </span>industry</li>
+
+						<li><i class="fa fa-info" aria-hidden="true"></i> <span class="sr-only">Example of </span>info</li>
+
+						<li><i class="fa fa-info-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>info-circle</li>
+
+						<li><i class="fa fa-institution" aria-hidden="true"></i> <span class="sr-only">Example of </span>institution <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-key" aria-hidden="true"></i> <span class="sr-only">Example of </span>key</li>
+
+						<li><i class="fa fa-keyboard-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>keyboard-o</li>
+
+						<li><i class="fa fa-language" aria-hidden="true"></i> <span class="sr-only">Example of </span>language</li>
+
+						<li><i class="fa fa-laptop" aria-hidden="true"></i> <span class="sr-only">Example of </span>laptop</li>
+
+						<li><i class="fa fa-leaf" aria-hidden="true"></i> <span class="sr-only">Example of </span>leaf</li>
+
+						<li><i class="fa fa-legal" aria-hidden="true"></i> <span class="sr-only">Example of </span>legal <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-lemon-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>lemon-o</li>
+
+						<li><i class="fa fa-level-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>level-down</li>
+
+						<li><i class="fa fa-level-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>level-up</li>
+
+						<li><i class="fa fa-life-bouy" aria-hidden="true"></i> <span class="sr-only">Example of </span>life-bouy <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-life-buoy" aria-hidden="true"></i> <span class="sr-only">Example of </span>life-buoy <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-life-ring" aria-hidden="true"></i> <span class="sr-only">Example of </span>life-ring</li>
+
+						<li><i class="fa fa-life-saver" aria-hidden="true"></i> <span class="sr-only">Example of </span>life-saver <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>lightbulb-o</li>
+
+						<li><i class="fa fa-line-chart" aria-hidden="true"></i> <span class="sr-only">Example of </span>line-chart</li>
+
+						<li><i class="fa fa-location-arrow" aria-hidden="true"></i> <span class="sr-only">Example of </span>location-arrow</li>
+
+						<li><i class="fa fa-lock" aria-hidden="true"></i> <span class="sr-only">Example of </span>lock</li>
+
+						<li><i class="fa fa-low-vision" aria-hidden="true"></i> <span class="sr-only">Example of </span>low-vision</li>
+
+						<li><i class="fa fa-magic" aria-hidden="true"></i> <span class="sr-only">Example of </span>magic</li>
+
+						<li><i class="fa fa-magnet" aria-hidden="true"></i> <span class="sr-only">Example of </span>magnet</li>
+
+						<li><i class="fa fa-mail-forward" aria-hidden="true"></i> <span class="sr-only">Example of </span>mail-forward <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-mail-reply" aria-hidden="true"></i> <span class="sr-only">Example of </span>mail-reply <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-mail-reply-all" aria-hidden="true"></i> <span class="sr-only">Example of </span>mail-reply-all <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-male" aria-hidden="true"></i> <span class="sr-only">Example of </span>male</li>
+
+						<li><i class="fa fa-map" aria-hidden="true"></i> <span class="sr-only">Example of </span>map</li>
+
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="sr-only">Example of </span>map-marker</li>
+
+						<li><i class="fa fa-map-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>map-o</li>
+
+						<li><i class="fa fa-map-pin" aria-hidden="true"></i> <span class="sr-only">Example of </span>map-pin</li>
+
+						<li><i class="fa fa-map-signs" aria-hidden="true"></i> <span class="sr-only">Example of </span>map-signs</li>
+
+						<li><i class="fa fa-meh-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>meh-o</li>
+
+						<li><i class="fa fa-microphone" aria-hidden="true"></i> <span class="sr-only">Example of </span>microphone</li>
+
+						<li><i class="fa fa-microphone-slash" aria-hidden="true"></i> <span class="sr-only">Example of </span>microphone-slash</li>
+
+						<li><i class="fa fa-minus" aria-hidden="true"></i> <span class="sr-only">Example of </span>minus</li>
+
+						<li><i class="fa fa-minus-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>minus-circle</li>
+
+						<li><i class="fa fa-minus-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>minus-square</li>
+
+						<li><i class="fa fa-minus-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>minus-square-o</li>
+
+						<li><i class="fa fa-mobile" aria-hidden="true"></i> <span class="sr-only">Example of </span>mobile</li>
+
+						<li><i class="fa fa-mobile-phone" aria-hidden="true"></i> <span class="sr-only">Example of </span>mobile-phone <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-money" aria-hidden="true"></i> <span class="sr-only">Example of </span>money</li>
+
+						<li><i class="fa fa-moon-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>moon-o</li>
+
+						<li><i class="fa fa-mortar-board" aria-hidden="true"></i> <span class="sr-only">Example of </span>mortar-board <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-motorcycle" aria-hidden="true"></i> <span class="sr-only">Example of </span>motorcycle</li>
+
+						<li><i class="fa fa-mouse-pointer" aria-hidden="true"></i> <span class="sr-only">Example of </span>mouse-pointer</li>
+
+						<li><i class="fa fa-music" aria-hidden="true"></i> <span class="sr-only">Example of </span>music</li>
+
+						<li><i class="fa fa-navicon" aria-hidden="true"></i> <span class="sr-only">Example of </span>navicon <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>newspaper-o</li>
+
+						<li><i class="fa fa-object-group" aria-hidden="true"></i> <span class="sr-only">Example of </span>object-group</li>
+
+						<li><i class="fa fa-object-ungroup" aria-hidden="true"></i> <span class="sr-only">Example of </span>object-ungroup</li>
+
+						<li><i class="fa fa-paint-brush" aria-hidden="true"></i> <span class="sr-only">Example of </span>paint-brush</li>
+
+						<li><i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="sr-only">Example of </span>paper-plane</li>
+
+						<li><i class="fa fa-paper-plane-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>paper-plane-o</li>
+
+						<li><i class="fa fa-paw" aria-hidden="true"></i> <span class="sr-only">Example of </span>paw</li>
+
+						<li><i class="fa fa-pencil" aria-hidden="true"></i> <span class="sr-only">Example of </span>pencil</li>
+
+						<li><i class="fa fa-pencil-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>pencil-square</li>
+
+						<li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>pencil-square-o</li>
+
+						<li><i class="fa fa-percent" aria-hidden="true"></i> <span class="sr-only">Example of </span>percent</li>
+
+						<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="sr-only">Example of </span>phone</li>
+
+						<li><i class="fa fa-phone-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>phone-square</li>
+
+						<li><i class="fa fa-photo" aria-hidden="true"></i> <span class="sr-only">Example of </span>photo <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>picture-o</li>
+
+						<li><i class="fa fa-pie-chart" aria-hidden="true"></i> <span class="sr-only">Example of </span>pie-chart</li>
+
+						<li><i class="fa fa-plane" aria-hidden="true"></i> <span class="sr-only">Example of </span>plane</li>
+
+						<li><i class="fa fa-plug" aria-hidden="true"></i> <span class="sr-only">Example of </span>plug</li>
+
+						<li><i class="fa fa-plus" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus</li>
+
+						<li><i class="fa fa-plus-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus-circle</li>
+
+						<li><i class="fa fa-plus-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus-square</li>
+
+						<li><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus-square-o</li>
+
+						<li><i class="fa fa-power-off" aria-hidden="true"></i> <span class="sr-only">Example of </span>power-off</li>
+
+						<li><i class="fa fa-print" aria-hidden="true"></i> <span class="sr-only">Example of </span>print</li>
+
+						<li><i class="fa fa-puzzle-piece" aria-hidden="true"></i> <span class="sr-only">Example of </span>puzzle-piece</li>
+
+						<li><i class="fa fa-qrcode" aria-hidden="true"></i> <span class="sr-only">Example of </span>qrcode</li>
+
+						<li><i class="fa fa-question" aria-hidden="true"></i> <span class="sr-only">Example of </span>question</li>
+
+						<li><i class="fa fa-question-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>question-circle</li>
+
+						<li><i class="fa fa-question-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>question-circle-o</li>
+
+						<li><i class="fa fa-quote-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>quote-left</li>
+
+						<li><i class="fa fa-quote-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>quote-right</li>
+
+						<li><i class="fa fa-random" aria-hidden="true"></i> <span class="sr-only">Example of </span>random</li>
+
+						<li><i class="fa fa-recycle" aria-hidden="true"></i> <span class="sr-only">Example of </span>recycle</li>
+
+						<li><i class="fa fa-refresh" aria-hidden="true"></i> <span class="sr-only">Example of </span>refresh</li>
+
+						<li><i class="fa fa-registered" aria-hidden="true"></i> <span class="sr-only">Example of </span>registered</li>
+
+						<li><i class="fa fa-remove" aria-hidden="true"></i> <span class="sr-only">Example of </span>remove <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-reorder" aria-hidden="true"></i> <span class="sr-only">Example of </span>reorder <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-reply" aria-hidden="true"></i> <span class="sr-only">Example of </span>reply</li>
+
+						<li><i class="fa fa-reply-all" aria-hidden="true"></i> <span class="sr-only">Example of </span>reply-all</li>
+
+						<li><i class="fa fa-retweet" aria-hidden="true"></i> <span class="sr-only">Example of </span>retweet</li>
+
+						<li><i class="fa fa-road" aria-hidden="true"></i> <span class="sr-only">Example of </span>road</li>
+
+						<li><i class="fa fa-rocket" aria-hidden="true"></i> <span class="sr-only">Example of </span>rocket</li>
+
+						<li><i class="fa fa-rss" aria-hidden="true"></i> <span class="sr-only">Example of </span>rss</li>
+
+						<li><i class="fa fa-rss-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>rss-square</li>
+
+						<li><i class="fa fa-search" aria-hidden="true"></i> <span class="sr-only">Example of </span>search</li>
+
+						<li><i class="fa fa-search-minus" aria-hidden="true"></i> <span class="sr-only">Example of </span>search-minus</li>
+
+						<li><i class="fa fa-search-plus" aria-hidden="true"></i> <span class="sr-only">Example of </span>search-plus</li>
+
+						<li><i class="fa fa-send" aria-hidden="true"></i> <span class="sr-only">Example of </span>send <span class="text-muted">(alias)</span></li>
+						
+						<li><i class="fa fa-send-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>send-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-server" aria-hidden="true"></i> <span class="sr-only">Example of </span>server</li>
+						</ul>
+						</div>
+						<div class="col-xs-6 col-sm-3 col-md-3">
+						<ul class="ul-icon">
+
+						<li><i class="fa fa-share" aria-hidden="true"></i> <span class="sr-only">Example of </span>share</li>
+
+						<li><i class="fa fa-share-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>share-alt</li>
+
+						<li><i class="fa fa-share-alt-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>share-alt-square</li>
+
+						<li><i class="fa fa-share-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>share-square</li>
+
+						<li><i class="fa fa-share-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>share-square-o</li>
+
+						<li><i class="fa fa-shield" aria-hidden="true"></i> <span class="sr-only">Example of </span>shield</li>
+
+						<li><i class="fa fa-ship" aria-hidden="true"></i> <span class="sr-only">Example of </span>ship</li>
+
+						<li><i class="fa fa-shopping-bag" aria-hidden="true"></i> <span class="sr-only">Example of </span>shopping-bag</li>
+
+						<li><i class="fa fa-shopping-basket" aria-hidden="true"></i> <span class="sr-only">Example of </span>shopping-basket</li>
+
+						<li><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="sr-only">Example of </span>shopping-cart</li>
+
+						<li><i class="fa fa-sign-in" aria-hidden="true"></i> <span class="sr-only">Example of </span>sign-in</li>
+
+						<li><i class="fa fa-sign-language" aria-hidden="true"></i> <span class="sr-only">Example of </span>sign-language</li>
+
+						<li><i class="fa fa-sign-out" aria-hidden="true"></i> <span class="sr-only">Example of </span>sign-out</li>
+
+						<li><i class="fa fa-signal" aria-hidden="true"></i> <span class="sr-only">Example of </span>signal</li>
+
+						<li><i class="fa fa-signing" aria-hidden="true"></i> <span class="sr-only">Example of </span>signing <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-sitemap" aria-hidden="true"></i> <span class="sr-only">Example of </span>sitemap</li>
+
+						<li><i class="fa fa-sliders" aria-hidden="true"></i> <span class="sr-only">Example of </span>sliders</li>
+
+						<li><i class="fa fa-smile-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>smile-o</li>
+
+						<li><i class="fa fa-soccer-ball-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>soccer-ball-o <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-sort" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort</li>
+
+						<li><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-alpha-asc</li>
+
+						<li><i class="fa fa-sort-alpha-desc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-alpha-desc</li>
+
+						<li><i class="fa fa-sort-amount-asc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-amount-asc</li>
+
+						<li><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-amount-desc</li>
+
+						<li><i class="fa fa-sort-asc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-asc</li>
+
+						<li><i class="fa fa-sort-desc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-desc</li>
+
+						<li><i class="fa fa-sort-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-down <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-numeric-asc</li>
+
+						<li><i class="fa fa-sort-numeric-desc" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-numeric-desc</li>
+
+						<li><i class="fa fa-sort-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>sort-up <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-space-shuttle" aria-hidden="true"></i> <span class="sr-only">Example of </span>space-shuttle</li>
+
+						<li><i class="fa fa-spinner" aria-hidden="true"></i> <span class="sr-only">Example of </span>spinner</li>
+
+						<li><i class="fa fa-spoon" aria-hidden="true"></i> <span class="sr-only">Example of </span>spoon</li>
+
+						<li><i class="fa fa-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>square</li>
+
+						<li><i class="fa fa-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>square-o</li>
+
+						<li><i class="fa fa-star" aria-hidden="true"></i> <span class="sr-only">Example of </span>star</li>
+
+						<li><i class="fa fa-star-half" aria-hidden="true"></i> <span class="sr-only">Example of </span>star-half</li>
+
+						<li><i class="fa fa-star-half-empty" aria-hidden="true"></i> <span class="sr-only">Example of </span>star-half-empty <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-star-half-full" aria-hidden="true"></i> <span class="sr-only">Example of </span>star-half-full <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-star-half-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>star-half-o</li>
+
+						<li><i class="fa fa-star-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>star-o</li>
+
+						<li><i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="sr-only">Example of </span>sticky-note</li>
+
+						<li><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>sticky-note-o</li>
+
+						<li><i class="fa fa-street-view" aria-hidden="true"></i> <span class="sr-only">Example of </span>street-view</li>
+
+						<li><i class="fa fa-suitcase" aria-hidden="true"></i> <span class="sr-only">Example of </span>suitcase</li>
+
+						<li><i class="fa fa-sun-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>sun-o</li>
+
+						<li><i class="fa fa-support" aria-hidden="true"></i> <span class="sr-only">Example of </span>support <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-tablet" aria-hidden="true"></i> <span class="sr-only">Example of </span>tablet</li>
+
+						<li><i class="fa fa-tachometer" aria-hidden="true"></i> <span class="sr-only">Example of </span>tachometer</li>
+
+						<li><i class="fa fa-tag" aria-hidden="true"></i> <span class="sr-only">Example of </span>tag</li>
+
+						<li><i class="fa fa-tags" aria-hidden="true"></i> <span class="sr-only">Example of </span>tags</li>
+
+						<li><i class="fa fa-tasks" aria-hidden="true"></i> <span class="sr-only">Example of </span>tasks</li>
+
+						<li><i class="fa fa-taxi" aria-hidden="true"></i> <span class="sr-only">Example of </span>taxi</li>
+
+						<li><i class="fa fa-television" aria-hidden="true"></i> <span class="sr-only">Example of </span>television</li>
+
+						<li><i class="fa fa-terminal" aria-hidden="true"></i> <span class="sr-only">Example of </span>terminal</li>
+
+						<li><i class="fa fa-thumb-tack" aria-hidden="true"></i> <span class="sr-only">Example of </span>thumb-tack</li>
+
+						<li><i class="fa fa-thumbs-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>thumbs-down</li>
+
+						<li><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>thumbs-o-down</li>
+
+						<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>thumbs-o-up</li>
+
+						<li><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>thumbs-up</li>
+
+						<li><i class="fa fa-ticket" aria-hidden="true"></i> <span class="sr-only">Example of </span>ticket</li>
+
+						<li><i class="fa fa-times" aria-hidden="true"></i> <span class="sr-only">Example of </span>times</li>
+
+						<li><i class="fa fa-times-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>times-circle</li>
+
+						<li><i class="fa fa-times-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>times-circle-o</li>
+
+						<li><i class="fa fa-tint" aria-hidden="true"></i> <span class="sr-only">Example of </span>tint</li>
+
+						<li><i class="fa fa-toggle-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-down <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-toggle-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-left <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-toggle-off" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-off</li>
+
+						<li><i class="fa fa-toggle-on" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-on</li>
+
+						<li><i class="fa fa-toggle-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-right <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-toggle-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-up <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-trademark" aria-hidden="true"></i> <span class="sr-only">Example of </span>trademark</li>
+
+						<li><i class="fa fa-trash" aria-hidden="true"></i> <span class="sr-only">Example of </span>trash</li>
+
+						<li><i class="fa fa-trash-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>trash-o</li>
+
+						<li><i class="fa fa-tree" aria-hidden="true"></i> <span class="sr-only">Example of </span>tree</li>
+
+						<li><i class="fa fa-trophy" aria-hidden="true"></i> <span class="sr-only">Example of </span>trophy</li>
+
+						<li><i class="fa fa-truck" aria-hidden="true"></i> <span class="sr-only">Example of </span>truck</li>
+
+						<li><i class="fa fa-tty" aria-hidden="true"></i> <span class="sr-only">Example of </span>tty</li>
+
+						<li><i class="fa fa-tv" aria-hidden="true"></i> <span class="sr-only">Example of </span>tv <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-umbrella" aria-hidden="true"></i> <span class="sr-only">Example of </span>umbrella</li>
+
+						<li><i class="fa fa-universal-access" aria-hidden="true"></i> <span class="sr-only">Example of </span>universal-access</li>
+
+						<li><i class="fa fa-university" aria-hidden="true"></i> <span class="sr-only">Example of </span>university</li>
+
+						<li><i class="fa fa-unlock" aria-hidden="true"></i> <span class="sr-only">Example of </span>unlock</li>
+
+						<li><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>unlock-alt</li>
+
+						<li><i class="fa fa-unsorted" aria-hidden="true"></i> <span class="sr-only">Example of </span>unsorted <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-upload" aria-hidden="true"></i> <span class="sr-only">Example of </span>upload</li>
+
+						<li><i class="fa fa-user" aria-hidden="true"></i> <span class="sr-only">Example of </span>user</li>
+
+						<li><i class="fa fa-user-plus" aria-hidden="true"></i> <span class="sr-only">Example of </span>user-plus</li>
+
+						<li><i class="fa fa-user-secret" aria-hidden="true"></i> <span class="sr-only">Example of </span>user-secret</li>
+
+						<li><i class="fa fa-user-times" aria-hidden="true"></i> <span class="sr-only">Example of </span>user-times</li>
+
+						<li><i class="fa fa-users" aria-hidden="true"></i> <span class="sr-only">Example of </span>users</li>
+
+						<li><i class="fa fa-video-camera" aria-hidden="true"></i> <span class="sr-only">Example of </span>video-camera</li>
+
+						<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> <span class="sr-only">Example of </span>volume-control-phone</li>
+
+						<li><i class="fa fa-volume-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>volume-down</li>
+
+						<li><i class="fa fa-volume-off" aria-hidden="true"></i> <span class="sr-only">Example of </span>volume-off</li>
+
+						<li><i class="fa fa-volume-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>volume-up</li>
+
+						<li><i class="fa fa-warning" aria-hidden="true"></i> <span class="sr-only">Example of </span>warning <span class="text-muted">(alias)</span></li>
+
+						<li><i class="fa fa-wheelchair" aria-hidden="true"></i> <span class="sr-only">Example of </span>wheelchair</li>
+
+						<li><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>wheelchair-alt</li>
+
+						<li><i class="fa fa-wifi" aria-hidden="true"></i> <span class="sr-only">Example of </span>wifi</li>
+
+						<li><i class="fa fa-wrench" aria-hidden="true"></i> <span class="sr-only">Example of </span>wrench</li>
+						</ul>
+					</div>
+				</div>
+
+					<p>It you want to increase icon sizes relative to their container use the classes .fa-lg, .fa-2x, .fa-3x, .fa-4x or .fa-5x.
+					<div class="box-samples">
+						<ul class="ul-icon">
+							<li><i class="fa fa-camera-retro fa-lg"></i> fa-lg</li>
+							<li><i class="fa fa-camera-retro fa-2x"></i> fa-2x</li>
+							<li><i class="fa fa-camera-retro fa-3x"></i> fa-3x</li>
+							<li><i class="fa fa-camera-retro fa-4x"></i> fa-4x</li>
+							<li><i class="fa fa-camera-retro fa-5x"></i> fa-5x</li>
+						</ul>
+					</div>
+
+<pre><code class="language-markup">&lt;i class=&quot;fa fa-camera-retro fa-lg&quot;&gt;&lt;/i&gt; fa-lg
+&lt;i class=&quot;fa fa-camera-retro fa-2x&quot;&gt;&lt;/i&gt; fa-2x
+&lt;i class=&quot;fa fa-camera-retro fa-3x&quot;&gt;&lt;/i&gt; fa-3x
+&lt;i class=&quot;fa fa-camera-retro fa-4x&quot;&gt;&lt;/i&gt; fa-4x
+&lt;i class=&quot;fa fa-camera-retro fa-5x&quot;&gt;&lt;/i&gt; fa-5x</code></pre>
+					
+					<p>There's more, read about what you can do with this feautre on <a href="https://fortawesome.github.io/Font-Awesome/examples/">Font-Awesome examples page</a>.
 
 					<hr>
 			
 			</div>
 			<div class="col-xs-3">
 				<ul class="lateral-menu">
-					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#getting-started">Getting Started</a></li>
 					<ul>
-						<li><a href="#getting-started">Getting Started</a></li>
+						<li><a href="#installation">Installation</a></li>
 						<li><a href="#basic-template">Basic template</a></li>
 					</ul>
 					<li><a href="#layout">Layout</a></li>
@@ -236,6 +1292,12 @@ main( )
 						<li><a href="#blockquotes">Blockquotes</a></li>
 						<li><a href="#code">Code</a></li>
 						<li><a href="#highlight">Highlight</a></li>
+					</ul>
+					<li><a href="#ui-kit">UI Kit</a></li>
+					<ul>
+						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#tables">Tables</a></li>
+						<li><a href="#icons">Icons</a></li>
 					</ul>
 				</ul>
 			</div>
@@ -260,6 +1322,13 @@ main( )
 		</div>
 	</div>
 </div>
+
+
+	<!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Main origen javascript file-->
+    <!-- <script src="../../origen/dist/js/origen.js"></script> -->
+    <script src="../js/origen.js"></script> 
 
 </body>
 </html>
