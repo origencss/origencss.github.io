@@ -11,6 +11,13 @@
 	<link rel="stylesheet" style="text/css" href="../css/front.css" >
 </head>
 <body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Main origen javascript file-->
+<!-- <script src="../../origen/dist/js/origen.js"></script> -->
+<script src="../js/origen.js"></script> 
+
 <div class="site">
 	<header class="nav-bar-inverse greenv4">
 			<div class="container max-1200">
@@ -1533,6 +1540,42 @@ main( )
 			<p>These components uses the library of javascript jQuery, so you need to add the library before the execution of the javascript/jquery code.</p>
 
 			<h2><a name="slider">Slider</a></h2>
+			<p>This is a cool component for cycling elements like images.</p>
+			<div id="example-slider" class="slider">
+			    <ul class="slides">
+			        <li class="slide"><img src="images/slider001.jpg"></li>
+			        <li class="slide"><img src="images/slider002.jpg"></li>
+			        <li class="slide"><img src="images/slider003.jpg"></li>
+			        <li class="slide"><img src="images/slider004.jpg"></li>
+			        <li class="slide"><img src="images/slider001.jpg"></li>
+			    </ul>
+			</div>
+
+			<script>
+			$('#example-slider').slider({
+			    width: 720,
+			    animationSpeed: 1000,
+			    pause: 3000,
+			});
+			</script>
+
+			<p>The structure of the slider is something like this: </p>
+			<pre><code class="language-markup">&lt;div id=&quot;example-slider&quot; class=&quot;slider&quot;&gt;
+    &lt;ul class=&quot;slides&quot;&gt;
+        &lt;li class=&quot;slide&quot;&gt;&lt;img src=&quot;images/slider001.jpg&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;slide&quot;&gt;&lt;img src=&quot;images/slider002.jpg&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;slide&quot;&gt;&lt;img src=&quot;images/slider003.jpg&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;slide&quot;&gt;&lt;img src=&quot;images/slider004.jpg&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;slide&quot;&gt;&lt;img src=&quot;images/slider001.jpg&quot;&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+			<p>Also, you need to asign an ID (example-slider in this example) to the slider and call it with the function <code>.slider</code> on a script of jQuery.</p>
+			<pre><code class="language-javascript">$('#example-slider').slider({
+    width: 720,
+    animationSpeed: 1000,
+    pause: 3000,
+});</code></pre>
 
 			</div>
 		</div>
@@ -1557,11 +1600,7 @@ main( )
 </div>
 
 
-	<!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Main origen javascript file-->
-    <!-- <script src="../../origen/dist/js/origen.js"></script> -->
-    <script src="../js/origen.js"></script> 
+	
 
 </body>
 </html>
