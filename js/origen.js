@@ -54,4 +54,117 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
 
     };
 
+    //Dialog
+    $.fn.dialog_box = function(options){
+
+        // Default parameters
+
+        var scr = $("body").scrollTop();
+        var total = $("body").height();
+        var per = (scr * 100 / total);
+
+        var settings = $.extend({
+            height : "250",
+            width : "500",
+            title:"Title",
+            description: "This is a description.",
+            top: "20%",
+            left: "30%",
+
+        },options);
+                
+        return this.click(function(e){
+        	event.preventDefault();
+        	var scr = $("body").scrollTop();
+        	var total = $("body").height();
+        	var per = (scr * 100 / total);
+
+        	settings.top = per+"%";
+
+            add_block_page();
+            add_popup_box();
+            add_styles();
+
+            
+            $('.dialog_modal_box').fadeIn();
+   
+        });
+        
+         function add_styles(){         
+            $('.dialog_modal_box').css({ 
+                'position':'absolute', 
+                'left':settings.left,
+                'top':settings.top,
+                'display':'none',
+                'height': settings.height + 'px',
+                'width': settings.width + 'px',
+                'border':'1px solid #fff',
+                'box-shadow': '0px 2px 7px #292929',
+                '-moz-box-shadow': '0px 2px 7px #292929',
+                '-webkit-box-shadow': '0px 2px 7px #292929',
+                'border-radius':'5px',
+                '-moz-border-radius':'5px',
+                '-webkit-border-radius':'5px',
+                'background': '#fff', 
+                'z-index':'50',
+            });
+            $('.dialog_modal_close').css({
+                'position':'relative',
+                'top':'0px',
+                'left':'20px',
+                'float':'right',
+                'display':'block',
+                'height':'50px',
+                'width':'50px',
+                'color': '#000',
+                'text-shadow': '0 1px 0 #fff',
+                'opacity': '.2',
+                'font-size': '21px',
+                 'font-weight': 'bold'
+            });
+
+            var pageHeight = $(document).height();
+            var pageWidth = $(window).width();
+
+            $('.dialog_block_page').css({
+                'position':'absolute',
+                'top':'0',
+                'left':'0',
+                'background-color':'rgba(0,0,0,0.6)',
+                'height':pageHeight,
+                'width':pageWidth,
+                'z-index':'10',
+            });
+            $('.dialog_inner_modal_box').css({
+                'background-color':'#fff',
+                'height':(settings.height - 10) + 'px',
+                'width':(settings.width - 10) + 'px',
+                'padding':'5px',
+                'margin':'3px',
+                'border-radius':'1px',
+                '-moz-border-radius':'1px',
+                '-webkit-border-radius':'1px'
+            });
+        }
+        
+         function add_block_page(){
+            var block_page = $('<div class="dialog_block_page"></div>');
+                        
+            $(block_page).appendTo('body');
+        }
+                
+         function add_popup_box(){
+             var pop_up = $('<div class="dialog_modal_box"><a href="#" class="dialog_modal_close">x</a><div class="dialog_inner_modal_box"><h2 style="margin:0; padding:0;">' + settings.title + '</h2><hr style="margin:0; padding:0;"><p>' + settings.description + '</p></div></div>');
+             $(pop_up).appendTo('.dialog_block_page');
+                         
+             $('.dialog_modal_close').click(function(event){
+             	event.preventDefault();
+                $(this).parent().fadeOut().remove();
+                $('.dialog_block_page').fadeOut().remove();                 
+             });
+        }
+
+        return this;
+    };
+
 }( jQuery ));

@@ -1577,6 +1577,29 @@ main( )
     pause: 3000,
 });</code></pre>
 
+			<hr>
+
+			<h2><a name="dialog">Dialog</a></h2>
+			<p>Prompts a window dialog to create a nice inteface effect.</p>
+
+			<a href="#" id="dialog-example">Click Dialog Example</a>
+			<script>
+			$(document).ready(function(){
+			    $('#dialog-example').dialog_box({
+			        title:"Title of the dialog",
+			        description: "Insert here the description or the block of html.",
+			    });
+			});
+			</script>
+
+			<pre><code class="language-markup">&lt;a href=&quot;#&quot; id=&quot;dialog-example&quot;&gt;Click Dialog Example&lt;/a&gt;</code></pre>
+			<pre><code class="language-javascript">$(document).ready(function(){
+    $('#dialog-example').dialog_box({
+        title:&quot;Title of the dialog&quot;,
+        description: &quot;Insert here the description or the block of html.&quot;,
+    });
+});</code></pre>
+
 			</div>
 		</div>
 	</div>
