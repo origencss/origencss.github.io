@@ -73,11 +73,25 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
 
         },options);
                 
-        return this.click(function(e){
+        return this.click(function(event){
         	event.preventDefault();
-        	var scr = $("body").scrollTop();
+        	//var scr = $("body").scrollTop();
+             var scr;
+              if(window.pageYOffset!= undefined){
+                 scr =  pageYOffset+20;
+              }
+             
+             if (window.pageYOffset == undefined)  {
+                  var sx, sy, d= document, r= d.documentElement, b= d.body;
+                  sx= r.scrollLeft || b.scrollLeft || 0;
+                  sy= r.scrollTop || b.scrollTop || 0;
+                  scr = sy+20;
+            }
+
         	var total = $("body").height();
         	var per = (scr * 100 / total);
+            console.log("scr="+scr+" ; total = "+total+" ; per = "+per);
+            //per = 95;
 
         	settings.top = per+"%";
 
