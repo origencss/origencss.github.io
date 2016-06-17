@@ -3344,4 +3344,26 @@ label {
     width: 720px;
     height: 400px; }
 
+/* Tabs */
+.tabs {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0; }
+  .tabs li {
+    list-style: none;
+    display: inline;
+    margin-right: 2px;
+    line-height: 1.42857143; }
+  .tabs a {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #ddd;
+    border-bottom: none; }
+    .tabs a.active {
+      background: #e6e6e6;
+      color: #000; }
+
 /*# sourceMappingURL=origen.css.map */

@@ -68,7 +68,7 @@
 					<ul>
 						<li><a href="#slider">Slider</a></li>
 						<li><a href="#dialog">Dialog</a></li>
-						<!-- <li><a href="#Collapse">Collapse</a></li> -->
+						<li><a href="#tabs">Tabs</a></li> 
 					</ul>
 				</ul>
 			</div>
@@ -1587,7 +1587,7 @@ main( )
 			$(document).ready(function(){
 			    $('#dialog-example').dialog_box({
 			        title:"Title of the dialog",
-			        description: "Insert here the description or the block of html.",
+			        description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin congue pellentesque. Sed at aliquet orci. Vivamus sollicitudin elit arcu, vel pharetra felis posuere ut. Quisque orci quam, congue ac mattis et, euismod id ligula. In gravida id nunc vel auctor. Vivamus suscipit sem sed urna malesuada, at faucibus arcu molestie. Etiam gravida ante nec sodales sodales. Suspendisse potenti. Ut bibendum pharetra turpis ut sollicitudin.</p> <p>Vivamus posuere mauris in nisi eleifend fermentum. Praesent condimentum odio lorem, et sagittis enim venenatis id. Vestibulum ex lacus, sollicitudin et placerat in, tincidunt at nisl. Cras sit amet libero finibus, commodo eros tristique, commodo tellus. Mauris in leo sit amet purus pretium suscipit dapibus eget nisl. Etiam a est magna. Nam sit amet enim massa. Maecenas quis dignissim erat, et consectetur justo. Donec vestibulum nibh non mi semper placerat.</p>",
 			    });
 			});
 			</script>
@@ -1599,6 +1599,52 @@ main( )
         description: &quot;Insert here the description or the block of html.&quot;,
     });
 });</code></pre>
+
+			<hr>
+			<h2><a name="tabs">Tabs</a></h2>
+			<p>Tabs help you organize content in a single container. You can switch between these tabs.</p>
+			<ul id="tabs-example" class="tabs">
+			    <li><a href="#tab1">Tab 1</a></li>
+			    <li><a href="#tab2">Tab 2</a></li>
+			    <li><a href="#tab3">Tab 3</a></li>
+			</ul>
+
+
+			<div id="tab1">
+			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin congue pellentesque. Sed at aliquet orci. Vivamus sollicitudin elit arcu, vel pharetra felis posuere ut. Quisque orci quam, congue ac mattis et, euismod id ligula. In gravida id nunc vel auctor. Vivamus suscipit sem sed urna malesuada, at faucibus arcu molestie. Etiam gravida ante nec sodales sodales. Suspendisse potenti. Ut bibendum pharetra turpis ut sollicitudin. </p>
+			</div>
+
+			<div id="tab2">
+			    <p>Vivamus posuere mauris in nisi eleifend fermentum. Praesent condimentum odio lorem, et sagittis enim venenatis id. Vestibulum ex lacus, sollicitudin et placerat in, tincidunt at nisl. Cras sit amet libero finibus, commodo eros tristique, commodo tellus. Mauris in leo sit amet purus pretium suscipit dapibus eget nisl. Etiam a est magna. Nam sit amet enim massa. Maecenas quis dignissim erat, et consectetur justo. Donec vestibulum nibh non mi semper placerat. </p>
+			</div>
+
+			<div id="tab3">
+			    <p>Curabitur eu ultricies ligula, nec tincidunt urna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam fringilla in velit in elementum. Donec orci ipsum, hendrerit sit amet sem nec, mollis interdum elit. Integer ac purus non odio eleifend malesuada. Proin hendrerit ex non efficitur fermentum. Quisque porta tortor sed dolor auctor, in tincidunt sapien dictum. Fusce dictum mi at eros euismod, vitae pellentesque odio condimentum.</p>
+			</div>
+			<script>
+				$('#tabs-example').tabs();
+			</script>
+			<pre><code class="language-markup">&lt;ul id=&quot;tabs-example&quot; class=&quot;tabs&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab1&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab2&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab3&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;tab1&quot;&gt;
+    &lt;p&gt;... &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;tab2&quot;&gt;
+    &lt;p&gt;... &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;tab3&quot;&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</code></pre>	
+			<pre><code class="language-javascript">&lt;script&gt;
+	$('#tabs-example').tabs();
+&lt;/script&gt;</code></pre>
+
 
 			</div>
 		</div>
