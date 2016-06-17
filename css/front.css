@@ -86,6 +86,16 @@ html,body {
 	color: #e8e7e7;
 	line-height: 0.7;
 }
+/* Ajustar tamaño del logo en dispositivos pequeños */
+@media (max-width: 580px) {
+  .logo h1 {
+    font-size: 15em;
+  }
+  .logo p{
+  	font-size: 3.9em;
+  }
+}
+
 .superior {
 	background-color: rgba(40,40,40,0.90);
 
