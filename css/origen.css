@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Origen by Migueladn version (0.8.0-alpha) */
+/* Origen by Migueladn version (0.8.1-alpha) */
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -2655,6 +2655,7 @@ pre[class*="language-"] {
 
 /* Flexbox grid system*/
 .container {
+  overflow: hidden;
   margin-right: auto;
   margin-left: auto; }
 
